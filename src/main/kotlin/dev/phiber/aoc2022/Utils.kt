@@ -2,6 +2,11 @@
 package dev.phiber.aoc2022
 
 
+fun readAllLinesUntilEmpty() : List<String> =
+    generateSequence(::readln)
+        .takeWhile { it.isNotEmpty() }
+        .toList()
+
 fun readAllLinesUntilDoubleEmpty() : List<String> =
     generateSequence(::readln)
         .windowed(2)
